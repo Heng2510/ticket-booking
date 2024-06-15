@@ -73,7 +73,7 @@ const OrderShow = ({ order, currentUser }) => {
         <div className="text-center">
           <StripeCheckout
             token={({ id }) => doRequest({ token: id })}
-            stripeKey="pk_test_51OxtLHP7HVfEOnrnh7MkY9TIGTbRREXSN6j3UVE3CdBAjkzsW9v4JUsKl4Kvcw6O59TdKRx8P6bOw3wh4pqfvPPa00WIPqy3pe"
+            stripeKey={YOUR_STRIPE_KEY}
             amount={order.ticket.price * 100}
             email={currentUser.email}
           />
